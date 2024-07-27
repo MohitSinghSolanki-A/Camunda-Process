@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.25.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.6.0" camunda:diagramRelationId="272d0bdb-9da5-4e0f-b228-c8da18067497">
+  <bpmn:process id="Process_1jh7hil" name="Allen-new" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:userTaskForm id="UserTaskForm_0jjbjr6">{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.5.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "a9550ae"
+  },
+  "schemaVersion": 16,
+  "id": "Form_1xg67ou",
+  "components": [
+    {
+      "text": "Basic Details",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0k5aiob",
+        "columns": null
+      },
+      "id": "Field_038xzk4"
+    },
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1wq28vg",
+        "columns": null
+      },
+      "id": "Field_1ngfk0e",
+      "key": "Name_BD"
+    },
+    {
+      "label": "Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_12pp2mi",
+        "columns": null
+      },
+      "id": "Field_055dxlr",
+      "key": "Email_BD"
+    },
+    {
+      "label": "Phone",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0a0tq2z",
+        "columns": null
+      },
+      "id": "Field_0arlsu0",
+      "key": "Phone_BD"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "DOB",
+      "label": "Date time",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0vykkob",
+        "columns": null
+      },
+      "id": "Field_14k3zn7",
+      "key": "DOB_BD"
+    },
+    {
+      "values": [
+        {
+          "label": "Male",
+          "value": "\"Male\""
+        },
+        {
+          "label": "Female",
+          "value": "\"Female\""
+        },
+        {
+          "label": "Other",
+          "value": "\"Other\""
+        }
+      ],
+      "label": "Gender",
+      "type": "select",
+      "layout": {
+        "row": "Row_021kjmk",
+        "columns": null
+      },
+      "id": "Field_143v4y5",
+      "key": "Gender_BD",
+      "defaultValue": "&lt;none&gt;"
+    },
+    {
+      "values": [
+        {
+          "label": "O+",
+          "value": "\"O+\""
+        },
+        {
+          "label": "O-",
+          "value": "\"O-\""
+        },
+        {
+          "label": "A+",
+          "value": "\"A+\""
+        },
+        {
+          "label": "A-",
+          "value": "\"A-"
+        },
+        {
+          "label": "B+",
+          "value": "\"B+\""
+        },
+        {
+          "label": "B-",
+          "value": "\"B-\""
+        },
+        {
+          "label": "AB+",
+          "value": "\"AB+\""
+        },
+        {
+          "label": "AB-",
+          "value": "\"AB-\""
+        }
+      ],
+      "label": "Blood Group",
+      "type": "select",
+      "layout": {
+        "row": "Row_07hk6ll",
+        "columns": null
+      },
+      "id": "Field_13f6hu2",
+      "key": "Blood_BD"
+    },
+    {
+      "action": "reset",
+      "label": "Reset",
+      "type": "button",
+      "layout": {
+        "row": "Row_1d5ygn3",
+        "columns": 8
+      },
+      "id": "Field_1vavosd"
+    },
+    {
+      "action": "submit",
+      "label": "Submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1d5ygn3",
+        "columns": 8
+      },
+      "id": "Field_09kcwyy"
+    }
+  ],
+  "type": "default"
+}</zeebe:userTaskForm>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1" name="start">
+      <bpmn:outgoing>Flow_1pxeb8x</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Activity_1lnopy2" name="Find student details using order ID" zeebe:modelerTemplate="io.camunda.connectors.HttpJson.v2" zeebe:modelerTemplateVersion="8" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3LjAzMzUgOC45OTk5N0MxNy4wMzM1IDEzLjQ0NzUgMTMuNDI4MSAxNy4wNTI5IDguOTgwNjUgMTcuMDUyOUM0LjUzMzE2IDE3LjA1MjkgMC45Mjc3NjUgMTMuNDQ3NSAwLjkyNzc2NSA4Ljk5OTk3QzAuOTI3NzY1IDQuNTUyNDggNC41MzMxNiAwLjk0NzA4MyA4Ljk4MDY1IDAuOTQ3MDgzQzEzLjQyODEgMC45NDcwODMgMTcuMDMzNSA0LjU1MjQ4IDE3LjAzMzUgOC45OTk5N1oiIGZpbGw9IiM1MDU1NjIiLz4KPHBhdGggZD0iTTQuOTMxMjYgMTQuMTU3MUw2Ljc4MTA2IDMuNzE0NzFIMTAuMTM3NUMxMS4xOTE3IDMuNzE0NzEgMTEuOTgyNCAzLjk4MzIzIDEyLjUwOTUgNC41MjAyN0MxMy4wNDY1IDUuMDQ3MzYgMTMuMzE1IDUuNzMzNTggMTMuMzE1IDYuNTc4OTJDMTMuMzE1IDcuNDQ0MTQgMTMuMDcxNCA4LjE1NTIyIDEyLjU4NDEgOC43MTIxNUMxMi4xMDY3IDkuMjU5MTMgMTEuNDU1MyA5LjYzNzA1IDEwLjYyOTggOS44NDU5TDEyLjA2MTkgMTQuMTU3MUgxMC4zMzE1TDkuMDMzNjQgMTAuMDI0OUg3LjI0MzUxTDYuNTEyNTQgMTQuMTU3MUg0LjkzMTI2Wk03LjQ5NzExIDguNTkyODFIOS4yNDI0OEM5Ljk5ODMyIDguNTkyODEgMTAuNTkwMSA4LjQyMzc0IDExLjAxNzcgOC4wODU2MUMxMS40NTUzIDcuNzM3NTMgMTEuNjc0MSA3LjI2NTEzIDExLjY3NDEgNi42Njg0MkMxMS42NzQxIDYuMTkxMDYgMTEuNTI0OSA1LjgxODExIDExLjIyNjUgNS41NDk1OUMxMC45MjgyIDUuMjcxMTMgMTAuNDU1OCA1LjEzMTkgOS44MDkzNiA1LjEzMTlIOC4xMDg3NEw3LjQ5NzExIDguNTkyODFaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="io.camunda:http-json:1" retries="3" />
+        <zeebe:ioMapping>
+          <zeebe:input source="bearer" target="authentication.type" />
+          <zeebe:input source="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhVVNzVzhHSTAzZHlRMEFJRlZuOTIiLCJkX3R5cGUiOiJ3ZWIiLCJkaWQiOiI2ZmY2ZTg5Zi0yMDgyLTRkZGItOGNmZC1jYzVjNWY3MThhNjMiLCJlX2lkIjoiOTUyOTYyNDEyIiwiZXhwIjoxNzIxOTk2MTcyLCJpYXQiOiIyMDI0LTA3LTI2VDEyOjExOjEyLjA0MTE1MDkxNloiLCJpc3MiOiJhdXRoZW50aWNhdGlvbi5hbGxlbi1zdGFnZSIsImlzdSI6IiIsInB0IjoiSU5URVJOQUxfVVNFUiIsInNpZCI6ImQyN2FhODMwLWNlMDAtNDk3OC1hNWUwLTEzNjUwMTRmN2Y1NiIsInRpZCI6ImFVU3NXOEdJMDNkeVEwQUlGVm45MiIsInR5cGUiOiJhY2Nlc3MiLCJ1aWQiOiJTeGR3MnY2MWUwbEx0cmtzZUxsU3MifQ.n9EAKFZFwKYuGI_RuTxHOI7aCQLyjRrOpmMpzymuNgU" target="authentication.token" />
+          <zeebe:input source="GET" target="method" />
+          <zeebe:input source="=&#34;https://bff.allen-stage.in/api/v1/student-dashboard/&#34;+URMPARAMS+&#34;/profile&#34;" target="url" />
+          <zeebe:input source="20" target="connectionTimeoutInSeconds" />
+          <zeebe:input source="20" target="readTimeoutInSeconds" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="resultVariable" value="findResponse" />
+          <zeebe:header key="errorExpression" value="=if error.code = &#34;404&#34; then&#10;  jobError(&#34;Resource not found&#34;)&#10;else if error.code = &#34;504&#34; then&#10;  jobError(&#34;Gateway timeout&#34;, {},job.retries - 1, @&#34;PT30S&#34;)&#10;else&#10;  null" />
+          <zeebe:header key="retryBackoff" value="PT0S" />
+        </zeebe:taskHeaders>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1pxeb8x</bpmn:incoming>
+      <bpmn:outgoing>Flow_1g1aykv</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gateway_1vu3vec" name="Student details found?">
+      <bpmn:extensionElements>
+        <zeebe:properties>
+          <zeebe:property />
+        </zeebe:properties>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1g1aykv</bpmn:incoming>
+      <bpmn:outgoing>Flow_1icjp08</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0nnlwsb</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="Event_0voj841" name="end">
+      <bpmn:incoming>Flow_0iwlgfi</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Event_1sooy30" name="end">
+      <bpmn:incoming>Flow_1icjp08</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1pxeb8x" sourceRef="StartEvent_1" targetRef="Activity_1lnopy2" />
+    <bpmn:sequenceFlow id="Flow_1g1aykv" sourceRef="Activity_1lnopy2" targetRef="Gateway_1vu3vec" />
+    <bpmn:sequenceFlow id="Flow_1icjp08" name="No" sourceRef="Gateway_1vu3vec" targetRef="Event_1sooy30">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=findResponse.status != 200</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="Activity_0v87m7u" name="Update User Details">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:UserTaskForm_0jjbjr6" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0nnlwsb</bpmn:incoming>
+      <bpmn:outgoing>Flow_17j78mx</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0nnlwsb" sourceRef="Gateway_1vu3vec" targetRef="Activity_0v87m7u">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=findResponse.status = 200</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_17j78mx" sourceRef="Activity_0v87m7u" targetRef="Activity_1qfba8r" />
+    <bpmn:serviceTask id="Activity_1qfba8r" name="Update User Api" zeebe:modelerTemplate="io.camunda.connectors.HttpJson.v2" zeebe:modelerTemplateVersion="8" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3LjAzMzUgOC45OTk5N0MxNy4wMzM1IDEzLjQ0NzUgMTMuNDI4MSAxNy4wNTI5IDguOTgwNjUgMTcuMDUyOUM0LjUzMzE2IDE3LjA1MjkgMC45Mjc3NjUgMTMuNDQ3NSAwLjkyNzc2NSA4Ljk5OTk3QzAuOTI3NzY1IDQuNTUyNDggNC41MzMxNiAwLjk0NzA4MyA4Ljk4MDY1IDAuOTQ3MDgzQzEzLjQyODEgMC45NDcwODMgMTcuMDMzNSA0LjU1MjQ4IDE3LjAzMzUgOC45OTk5N1oiIGZpbGw9IiM1MDU1NjIiLz4KPHBhdGggZD0iTTQuOTMxMjYgMTQuMTU3MUw2Ljc4MTA2IDMuNzE0NzFIMTAuMTM3NUMxMS4xOTE3IDMuNzE0NzEgMTEuOTgyNCAzLjk4MzIzIDEyLjUwOTUgNC41MjAyN0MxMy4wNDY1IDUuMDQ3MzYgMTMuMzE1IDUuNzMzNTggMTMuMzE1IDYuNTc4OTJDMTMuMzE1IDcuNDQ0MTQgMTMuMDcxNCA4LjE1NTIyIDEyLjU4NDEgOC43MTIxNUMxMi4xMDY3IDkuMjU5MTMgMTEuNDU1MyA5LjYzNzA1IDEwLjYyOTggOS44NDU5TDEyLjA2MTkgMTQuMTU3MUgxMC4zMzE1TDkuMDMzNjQgMTAuMDI0OUg3LjI0MzUxTDYuNTEyNTQgMTQuMTU3MUg0LjkzMTI2Wk03LjQ5NzExIDguNTkyODFIOS4yNDI0OEM5Ljk5ODMyIDguNTkyODEgMTAuNTkwMSA4LjQyMzc0IDExLjAxNzcgOC4wODU2MUMxMS40NTUzIDcuNzM3NTMgMTEuNjc0MSA3LjI2NTEzIDExLjY3NDEgNi42Njg0MkMxMS42NzQxIDYuMTkxMDYgMTEuNTI0OSA1LjgxODExIDExLjIyNjUgNS41NDk1OUMxMC45MjgyIDUuMjcxMTMgMTAuNDU1OCA1LjEzMTkgOS44MDkzNiA1LjEzMTlIOC4xMDg3NEw3LjQ5NzExIDguNTkyODFaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="io.camunda:http-json:1" retries="3" />
+        <zeebe:ioMapping>
+          <zeebe:input source="bearer" target="authentication.type" />
+          <zeebe:input source="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhVVNzVzhHSTAzZHlRMEFJRlZuOTIiLCJkX3R5cGUiOiJ3ZWIiLCJkaWQiOiI2ZmY2ZTg5Zi0yMDgyLTRkZGItOGNmZC1jYzVjNWY3MThhNjMiLCJlX2lkIjoiOTUyOTYyNDEyIiwiZXhwIjoxNzIxOTk2MTcyLCJpYXQiOiIyMDI0LTA3LTI2VDEyOjExOjEyLjA0MTE1MDkxNloiLCJpc3MiOiJhdXRoZW50aWNhdGlvbi5hbGxlbi1zdGFnZSIsImlzdSI6IiIsInB0IjoiSU5URVJOQUxfVVNFUiIsInNpZCI6ImQyN2FhODMwLWNlMDAtNDk3OC1hNWUwLTEzNjUwMTRmN2Y1NiIsInRpZCI6ImFVU3NXOEdJMDNkeVEwQUlGVm45MiIsInR5cGUiOiJhY2Nlc3MiLCJ1aWQiOiJTeGR3MnY2MWUwbEx0cmtzZUxsU3MifQ.n9EAKFZFwKYuGI_RuTxHOI7aCQLyjRrOpmMpzymuNgU" target="authentication.token" />
+          <zeebe:input source="PUT" target="method" />
+          <zeebe:input source="https://bff.allen-stage.in/api/v1/user/pii/5KRqiEgjUbF3TpzETONnK" target="url" />
+          <zeebe:input source="20" target="connectionTimeoutInSeconds" />
+          <zeebe:input source="20" target="readTimeoutInSeconds" />
+          <zeebe:input source="={&#10;  &#34;student_id&#34;: &#34;5KRqiEgjUbF3TpzETONnK&#34;,&#10;  &#34;user_pii_details&#34;: {&#10;    &#34;name&#34;: Name_BD,&#10;    &#34;email&#34;: Email_BD,&#10;    &#34;phone&#34;: Phone_BD,&#10;    &#34;blood_group&#34;: Blood_BD,&#10;    &#34;gender&#34;: Gender_BD,&#10;    &#34;date_of_birth&#34;: DOB_BD,&#10;    &#34;persona_type&#34;: &#34;STUDENT&#34;&#10;  }&#10;}" target="body" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="resultVariable" />
+          <zeebe:header key="resultExpression" />
+          <zeebe:header key="errorExpression" />
+          <zeebe:header key="retryBackoff" value="PT0S" />
+        </zeebe:taskHeaders>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_17j78mx</bpmn:incoming>
+      <bpmn:outgoing>Flow_0iwlgfi</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0iwlgfi" sourceRef="Activity_1qfba8r" targetRef="Event_0voj841" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1jh7hil">
+      <bpmndi:BPMNShape id="BPMNShape_1or3dfd" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="182" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="159" y="158" width="22" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1lnopy2_di" bpmnElement="Activity_1lnopy2">
+        <dc:Bounds x="450" y="159" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1vu3vec_di" bpmnElement="Gateway_1vu3vec" isMarkerVisible="true">
+        <dc:Bounds x="815" y="174" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="875" y="185" width="73" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0voj841_di" bpmnElement="Event_0voj841">
+        <dc:Bounds x="1282" y="372" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1291" y="415" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1sooy30_di" bpmnElement="Event_1sooy30">
+        <dc:Bounds x="1282" y="82" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1291" y="125" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1qfba8r_di" bpmnElement="Activity_1qfba8r">
+        <dc:Bounds x="1020" y="350" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0v87m7u_di" bpmnElement="Activity_0v87m7u">
+        <dc:Bounds x="790" y="350" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1pxeb8x_di" bpmnElement="Flow_1pxeb8x">
+        <di:waypoint x="188" y="200" />
+        <di:waypoint x="450" y="199" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1g1aykv_di" bpmnElement="Flow_1g1aykv">
+        <di:waypoint x="550" y="199" />
+        <di:waypoint x="815" y="199" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1icjp08_di" bpmnElement="Flow_1icjp08">
+        <di:waypoint x="840" y="174" />
+        <di:waypoint x="840" y="100" />
+        <di:waypoint x="1282" y="100" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1036" y="83" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0nnlwsb_di" bpmnElement="Flow_0nnlwsb">
+        <di:waypoint x="840" y="224" />
+        <di:waypoint x="840" y="350" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_17j78mx_di" bpmnElement="Flow_17j78mx">
+        <di:waypoint x="890" y="390" />
+        <di:waypoint x="1020" y="390" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0iwlgfi_di" bpmnElement="Flow_0iwlgfi">
+        <di:waypoint x="1120" y="390" />
+        <di:waypoint x="1282" y="390" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
